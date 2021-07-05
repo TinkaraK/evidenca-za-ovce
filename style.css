@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+* {
+    font-family: 'Inconsolata', monospace;
+}
+:root {
+    --darkolive: #273016;
+    --olive: #3b4921;
+    --olive2: #505f33;
+    --lighterolive: #5c7235;
+    --superlightolive: #aac37e; 
+    --lightgreen: #627938;
+    --brown: #a37745;
+}
+
+body, p, a, li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background: var(--lightgreen);
+}
+
+header {
+    padding: 10px 20px;
+    background-color: var(--olive);
+    grid-area: header;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+header h1 {
+    color: #ddd;
+
+}
+
+#nav {
+    grid-area: nav;
+}
+
+.button {
+    background: none;
+    border: 2px solid var(--olive);
+    color: var(--olive);
+    padding: 6px 6px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover {
+    color: white;
+    background: var(--olive);
+}
+
+input {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 2px solid var(--olive);
+    color: var(--olive);
+}
+
+
+
+h1, h2, h3, h4 {
+    color:var(--olive);
+    font-weight: normal;
+    line-height: 1.4em;
+}
+
+p, a, li {
+    color: var(--darkolive);
+    line-height: 1.4em;
+    font-size: 1em;
+    margin-left:40px;
+    margin-right: 40px;
+} 
+
+
+
+
+.leading{
+    font-size: 1.1em;
+}
+
+
+
+
+#najdiovco {
+    background-color: var(--lighterolive);
+    padding-bottom:20px;
+    color: var(--darkolive);
+    display: block;
+    align-items: center;
+    margin-left:40px;
+    grid-area: najdiovco;
+}
+
+#najdiovco input {
+    color:white;
+    background-color: #5c7235;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+#najdiovco button {
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#najdiovco h2 {
+    margin-bottom: 5px;
+    text-align: center;
+    color: var(--darkolive);
+}
+
+#seznamovac {
+    background-color: var(--superlightolive);
+    padding-bottom: 20px;
+    align-items: stretch;
+    display: block;
+    align-items: center;
+    margin-left:40px;
+    margin-right: 40px;
+    grid-area: seznamovac;
+}
+
+
+#seznamovac h3 {
+    margin-bottom: 0;
+    color:var(--darkolive);
+    font-weight: bolder;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#urediovco {
+    display: none;
+    position:fixed;
+    z-index: 1;
+    overflow: auto;
+    width: 90%;
+    padding-bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+article {
+    background-color: var(--superlightolive);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-items: stretch;
+    display: block;
+    align-items: center;
+    margin:40px;
+    grid-area:article;
+}
+article li {
+    list-style-type:none;
+    margin-top: 3px;
+    margin-left: 0;
+}
+article a:hover {
+    text-decoration: underline;
+}
+
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 80%;
+    background-color: var(--olive);
+    display: block;
+    padding-bottom: 20px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ h1 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0px;
+    font-size: 1.4em;
+}
+#urediovco input {
+    width: 80%;
+    border-color: var(--darkolive);
+    margin: 10px 0;
+    background-color:#4c5f2b;
+    color:#ddd;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: block;
+}
+.modal-content button {
+    background-color: var(--lighterolive);
+    color: var(--darkolive);
+    /*display: inline-block;*/
+    font-weight: 100;
+    float: inline-end;
+    margin-right: auto;
+    margin-top: -10px;
+    margin-left: 5px;
+}
+#dodajovco {
+    padding: 10px;
+    background-color: var(--lighterolive);
+    margin-bottom:30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: block;
+    align-items: center;
+    grid-area: dodajovco;
+}
+
+#dodajovco h2 {
+    text-align: center;
+    color: var(--darkolive)
+}
+
+#dodajovco form {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#dodajovco input {
+    width: 100%;
+    border-color: var(--darkolive);
+    margin: 10px 0;
+    background-color:#4c5f2b;
+    color:#ddd;
+    margin-left: -20px;
+}
+
+#dodajovco label {
+    margin: 0;
+    color:var(--darkolive);
+    
+    }
+
+::placeholder {
+    color:white;
+}
+
+#dodajovco button {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    padding: 30px 20px;
+    background-color: var(--olive);
+    grid-area: footer;
+}
+
+footer .avtor{
+    font-size: 0.8em;
+    text-align: center;
+    color: rgb(255,255,255,0.5);
+    
+}
+
+footer a {
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: underline;
+    color:grey;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'article'
+        'najdiovco'
+        'seznamovac'
+        'dodajovco'
+        'footer';
+    }
+
+    #dodajovco {
+        margin-left:0px;
+        margin-right: 0px;
+    }
+
+    #seznamovac {
+        margin-left:0px;
+        margin-right: 0px;
+    }
+
+    #najdiovco {
+        margin-left:0px;
+        margin-right: 0px;
+    }
+
+    .table {
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+        border-collapse: collapse;
+        width: 100%;
+        align-self: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .table thead {
+        display:none;
+    }
+    
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        border-collapse: collapse;
+    }
+    
+    .table tbody {
+        width: 100%;
+        text-align: right;
+    }
+    
+    .table tr {
+        margin-bottom: 5px;
+        border: 3px solid var(--darkolive);
+        background-color: #819759;
+    }
+    .table td:nth-child(even) {
+        background-color: #97ad6e;
+    }
+
+    .table tr:hover {
+        background-color: var(--olive2);
+    }
+    
+    .table th, .table td {
+        border: 2px solid var(--darkolive);
+        text-align: right;
+        padding: 8px;
+        font-size: 1.1em;
+    }
+    .table th {
+        background-color: var(--olive);
+        color:#f5f5f5;
+        border-color: var(--darkolive);  
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left:15px;
+        font-weight: bold;
+    }
+
+    #nav a {
+        color:white;
+        float: left;
+        padding: 10px 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: var(--darkolive);
+        display:block;
+        margin-left: -10px;
+        margin-top: 3px;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2em;
+        }
+
+    #nav a:hover {
+        background-color: var(--olive);
+        
+    }
+}
+/* tablica */
+@media screen and (min-width: 700px) and (max-width: 992px){
+    body {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-template-areas: 
+      'header header'
+      'nav nav'
+      'article article'
+      'najdiovco dodajovco'
+      'seznamovac seznamovac'
+      'footer footer';
+    }
+    header {
+        width: 100%;
+        margin-top: -15px;
+        margin-bottom: -15px;
+        color: white;
+    }
+    #nav {
+        overflow: hidden;
+        background-color: var(--darkolive);
+    }
+    #nav-div {
+        background-color: var(--darkolive);
+        margin-left: 40px;
+    }
+    #nav a {
+        margin: 0;
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        background-color: var(--darkolive);
+    }
+
+    #nav a:hover {
+        background-color: var(--olive);
+        
+    }
+    
+    .table {
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+        border-collapse: collapse;
+        width: 100%;
+        align-self: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .table td {
+        width: 20%;
+    }
+    .table th {
+        background-color: var(--olive);
+        color:#f5f5f5;
+    
+    }
+    .table tr:nth-child(even) {
+        background-color: #819759;
+    }
+    .table td, .table th {
+        border: 2px solid var(--darkolive);
+        text-align: center;
+        padding: 8px;
+    }
+    
+    .table tr:hover {
+        background-color: var(--olive2);
+    }
+    .table tr {
+        margin-bottom: 5px;
+        border: 3px solid var(--darkolive);
+        background-color: var(--superlightolive);
+    }
+    .modal-content {
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        background-color: var(--olive);
+        display: block;
+    
+    }
+    #najdiovco {
+        margin-top: 20px;
+        align-self: baseline;
+        padding-left: 20px;
+        padding-right: 40px;
+        
+    }
+    #najdiovco h2 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    #najdiovco input {
+        width: 70%;
+    }
+    
+    #dodajovco {
+        margin-right: 40px;
+    }
+
+  }
+
+/* desktop */
+@media screen and (min-width: 992px) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'article article'
+        'najdiovco seznamovac'
+        'dodajovco seznamovac'
+        'footer footer';
+    }
+    header {
+        width: 100%;
+        margin-top: -15px;
+        margin-bottom: -15px;
+    }
+    #nav {
+        overflow: hidden;
+        background-color: var(--darkolive);
+    }
+    #nav-div {
+        background-color: var(--darkolive);
+        margin-left: 40px;
+    }
+    #nav a {
+        margin: 0;
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        background-color: var(--darkolive);
+    }
+
+    #nav a:hover {
+        background-color: var(--olive);
+        
+    }
+    
+    .table {
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+        border-collapse: collapse;
+        width: 100%;
+        align-self: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .table td {
+        width: 20%;
+    }
+    .table th {
+        background-color: var(--olive);
+        color:#f5f5f5;
+    
+    }
+    .table tr:nth-child(even) {
+        background-color: #819759;
+    }
+    .table td, .table th {
+        border: 2px solid var(--darkolive);
+        text-align: center;
+        padding: 8px;
+    }
+    
+    .table tr:hover {
+        background-color: var(--olive2);
+    }
+    .table tr {
+        margin-bottom: 5px;
+        border: 3px solid var(--darkolive);
+        background-color: var(--superlightolive);
+    }
+    .modal-content {
+        margin: auto;
+        border: 1px solid #888;
+        width: 80%;
+        background-color: var(--olive);
+        display: block;
+    
+    }
+    #najdiovco {
+        margin-top: 20px;
+    }
+    #seznamovac {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+ 
+
+}
+

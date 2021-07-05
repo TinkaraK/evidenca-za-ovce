@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>eShepherd</title>
+</head>
+<body>
+    <header>
+        <h1>eShepherd</h1>
+    </header>
+    <nav id="nav">
+        <div id="nav-div">
+            <a href="#seznamovac">Seznam ovac</a>
+            <a href="#dodajovco">Dodaj ovco</a>
+            <a href="#najdiovco">Najdi ovco</a>
+            <a href="sources.html">Viri</a>
+        </div>
+    </nav>
+
+    <section id="najdiovco">
+        <h2>Najdi ovco</h2>
+        <input type="text" name="find_input" id="find_input" placeholder="Vpišite ID ovce">
+    </section>
+    
+    <div id="urediovco" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Uredi ovco</h1>
+            <input id="ovcaIDUredi" type="text" class="input" placeholder="ID ovce">
+            <input id="datumRojstvaUredi" type="date" class="input">
+            <input id="pasmaUredi" type="text" class="input" placeholder="Pasma">
+            <input id="mamaIDUredi" type="text" class="input" placeholder="ID mame">
+            <input id="oceIDUredi" type="text" class="input" placeholder="ID očeta">
+            <input id="steviloSorojencevUredi" type="number" class="input" placeholder="Število sorojencev">
+            <input id="opombeUredi" type="text" class="input" placeholder="Opombe">
+            <button id="izbrisi" class="button" type="button">Izbriši</button>
+            <button id="shrani" class="button" type="button">Shrani</button>
+        </div>
+    </div>
+
+    
+    <section id="seznamovac">
+        <h3>Ovce</h3>
+        <table class="table" id="ovceTable">
+            <thead>
+                <tr>
+                    <th>ID ovce</th>
+                    <th>datum rojstva</th>
+                    <th>pasma</th>
+                    <th>ID mame</th>
+                    <th>ID očeta</th>
+                    <th>število sorojencev</th>
+                    <th>opombe</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+          </table>
+    </section>
+
+    <section id="dodajovco">
+        <h2>Dodaj ovco</h2>
+        <form id="dodaj">
+            <label for="ovcaID">ID ovce </label>
+            <input id="ovcaID" type="text" class="input" placeholder="ID ovce">
+
+            <label for="datumRojstva">Datum rojstva </label>
+            <input id="datumRojstva" type="date" class="input">
+
+            <label for="pasma">Pasma </label>
+            <input id="pasma" type="text" class="input" placeholder="Pasma">
+
+            <label for="mamaID">ID mame </label>
+            <input id="mamaID" type="text" class="input" placeholder="ID mame">
+
+            <label for="oceID">ID očeta </label>
+            <input id="oceID" type="text" class="input" placeholder="ID očeta">
+
+            <label for="steviloSorojencev">Število sorojencev </label>
+            <input id="steviloSorojencev" type="number" class="input" placeholder="Število sorojencev">
+
+            <label for="opombe">Opombe </label>
+            <input id="opombe" type="text" class="input" placeholder="Opombe">
+        </form>
+        <button id="dodajOvco" class="button">Dodaj ovco</button>
+    </section>
+    <footer>
+        <div class="grid">
+            <p class="avtor">2020/2021, FRI, Tinkara Končan</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
